@@ -1,2 +1,2 @@
 # NodeRestAzure
-API's Node restfull dentro usando a Azure cloud.
+API's Node restfull usando a Azure cloud.
