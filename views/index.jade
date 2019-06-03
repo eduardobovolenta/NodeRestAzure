@@ -1,0 +1,40 @@
+extends layout
+block content
+     h1 #{title}
+     br
+
+     form(action="/completetask", method="post")
+      table.table.table-striped.table-bordered
+         tr
+           td Nome
+           td Categoria
+           td Data
+           td Deletar?
+         if (typeof tasks === "undefined")
+           tr
+             td
+         else
+           each task in tasks
+             tr
+               td #{task.name}
+               td #{task.category}
+               - var date  = new Date(task.date);
+               - var day   = date.getDate();
+               - var month = date.getMonth() + 1;
+               - var year  = date.getFullYear();
+               td #{month + "/" + day + "/" + year}
+               td
+                if(task.completed) 
+                 input(type="checkbox", name="#{task.id}", value="#{!task.completed}", checked=task.completed)
+                else
+                 input(type="checkbox", name="#{task.id}", value="#{!task.completed}", checked=task.completed)
+       button.btn.btn-primary(type="submit") Atualizar Usuários
+     hr
+     form.well(action="/addtask", method="post")
+       label Nome:
+       input(name="name", type="textbox")
+       br
+       label Categoria:
+       input(name="category", type="textbox")
+       br
+       button.btn(type="submit") Adicionar
