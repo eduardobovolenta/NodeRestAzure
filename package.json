@@ -1,0 +1,19 @@
+{
+  "name": "apirest",
+  "version": "1.0.0",
+  "description": "Apis Restfull Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduardobovolenta/NodeRestAzure.git"
+  },
+  "author": "Eduardo Bovolenta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduardobovolenta/NodeRestAzure/issues"
+  },
+  "homepage": "https://github.com/eduardobovolenta/NodeRestAzure#readme"
+}
