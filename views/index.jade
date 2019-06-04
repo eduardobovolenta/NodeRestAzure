@@ -9,7 +9,7 @@ block content
            td Nome
            td Categoria
            td Data
-           td Deletar?
+           td Finalizada?
          if (typeof tasks === "undefined")
            tr
              td
@@ -28,13 +28,13 @@ block content
                  input(type="checkbox", name="#{task.id}", value="#{!task.completed}", checked=task.completed)
                 else
                  input(type="checkbox", name="#{task.id}", value="#{!task.completed}", checked=task.completed)
-       button.btn.btn-primary(type="submit") Atualizar Usuários
+       button.btn.btn-primary(type="submit") Atualizar Tarefas
      hr
      form.well(action="/addtask", method="post")
-       label Nome:
-       input(name="name", type="textbox")
+       label Nome da Tarefa:
+       input(name="name", type="textbox", class="form-control")
        br
        label Categoria:
-       input(name="category", type="textbox")
+       input(name="category", type="textbox", class="form-control")
        br
-       button.btn(type="submit") Adicionar
+       button.btn(type="submit") Adicionar Item

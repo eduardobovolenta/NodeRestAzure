@@ -21,7 +21,7 @@ class TaskList {
 
    const items = await this.taskDao.find(querySpec);
    res.render("index", {
-     title: "Lista de Usuários",
+     title: "Lista de Tarefas",
      tasks: items
    });
  }
