@@ -1,2 +1,2 @@
 # NodeRestAzure
-API's Node restfull usando a Azure cloud.
+Aplicação Node + Express + CosmosDB
